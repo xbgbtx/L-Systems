@@ -6,6 +6,8 @@
         <meta name="HandheldFriendly" content="true" />
 
         <link rel="stylesheet" type="text/css" href="css/canvas_position.css" />
+        <link rel="stylesheet" type="text/css" href="css/ui_overlay.css" />
+        <link rel="stylesheet" type="text/css" href="css/visually_hidden.css" />
 
         <script type="text/javascript" src="lib/main.js" ></script>
         <script type="text/javascript" src="lib/l-system.js" ></script>
@@ -24,7 +26,22 @@
     <body onload="page_loaded()" >
         <main>
            <div id="root_div" class="max_size">
-              <div id="canvas_div" class="max_size" >
+              <div id="ui_overlay" >
+                 <div id="ui_overlay_button_column" >
+                    <div id="ui_buttons_grid">
+                       <div class="buttons_grid_item" >
+                          <button class="icon_button"
+                             onclick="ui_option_click('lsystem')">
+                           <img src="icons/menu.svg" 
+                              aria-hidden="true" 
+                              focusable="false" alt="Automaton" />
+                           <span class="visually-hidden">Automaton</span>
+                          </button>
+                        </div>
+                    </div>
+                 </div>
+              </div>
+              <div id="canvas_div" class="max_size"  >
                  <canvas id="pixi_canvas" title="L-System drawing canvas"
                    role="img" aria-label="L-System drawing canvas" />
               </div>
