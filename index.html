@@ -7,9 +7,11 @@
 
         <link rel="stylesheet" type="text/css" href="css/canvas_position.css" />
         <link rel="stylesheet" type="text/css" href="css/ui_overlay.css" />
+        <link rel="stylesheet" type="text/css" href="css/ui_overlay_menu.css" />
         <link rel="stylesheet" type="text/css" href="css/visually_hidden.css" />
 
         <script type="text/javascript" src="lib/main.js" ></script>
+        <script type="text/javascript" src="lib/ui.js" ></script>
         <script type="text/javascript" src="lib/l-system.js" ></script>
         <script type="text/javascript" src="lib/viewer.js" ></script>
 
@@ -40,7 +42,17 @@
                         </div>
                     </div>
                  </div>
+                  <div id="ui_menu" >
+                     <div id="ui_menu_header">
+                        <span id="ui_menu_title"></span>
+                        <button onclick="hide_ui_menu()" class="icon_button">
+                           <img src="icons/x.svg" />
+                        </button>
+                     </div>
+                     <div id="ui_menu_content"></div>
+                  </div>
               </div>
+
               <div id="canvas_div" class="max_size"  >
                  <canvas id="pixi_canvas" title="L-System drawing canvas"
                    role="img" aria-label="L-System drawing canvas" />
@@ -48,6 +60,17 @@
 
            </div>
         </main>
+
+        <template id="lsystem_menu_template">
+           <form>
+              <fieldset>
+                 <legend>System Settings</legend>
+              </fieldset>
+              <fieldset>
+                 <legend>Select Preset</legend>
+              </fieldset>
+           </form>
+        </template>
     </body>
 
 </html>
