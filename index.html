@@ -11,7 +11,7 @@
         <link rel="stylesheet" type="text/css" href="css/visually_hidden.css" />
 
         <script type="text/javascript" src="lib/main.js" ></script>
-        <script type="text/javascript" src="lib/ui.js" ></script>
+        <script type="text/javascript" src="lib/lsystem_dom.js" ></script>
         <script type="text/javascript" src="lib/l-system.js" ></script>
         <script type="text/javascript" src="lib/viewer.js" ></script>
 
@@ -33,7 +33,7 @@
                     <div id="ui_buttons_grid">
                        <div class="buttons_grid_item" >
                           <button class="icon_button"
-                             onclick="ui_option_click('lsystem')">
+                             onclick="ui_button_click('lsystem')">
                            <img src="icons/menu.svg" 
                               aria-hidden="true" 
                               focusable="false" alt="Automaton" />
@@ -45,7 +45,8 @@
                   <div id="ui_menu" >
                      <div id="ui_menu_header">
                         <span id="ui_menu_title"></span>
-                        <button onclick="hide_ui_menu()" class="icon_button">
+                        <button onclick="ui_button_click('ui_menu_close')" 
+                           class="icon_button">
                            <img src="icons/x.svg" />
                         </button>
                      </div>
