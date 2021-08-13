@@ -14,6 +14,7 @@
         <script type="text/javascript" src="lib/lsystem.js" ></script>
         <script type="text/javascript" src="lib/lsystem_app.js" ></script>
         <script type="text/javascript" src="lib/lsystem_dom.js" ></script>
+        <script type="text/javascript" src="lib/lsystem_presets.js" ></script>
         <script type="text/javascript" src="lib/lsystem_renderer.js" ></script>
         <script type="text/javascript" src="lib/lsystem_render_data.js" ></script>
         <script type="text/javascript" src="lib/lsystem_draw_commands.js" ></script>
@@ -68,19 +69,14 @@
         <template id="lsystem_menu_template">
            <form>
               <fieldset>
-                 <legend>System Settings</legend>
-                 <label for="start_string_field">Start String:</label>
-                 <input id="start_string_field" type="text">
-              </fieldset>
-              <fieldset>
                  <legend>Select Preset</legend>
-              </fieldset>
-              <fieldset>
-                 <legend>Generations</legend>
+                 <select name="select_presets" id="select_presets" >
+                    <option value="cantor">Cantor Set</option>
+                 </select>
               </fieldset>
 
               <button type="button" 
-                 onclick="ui_button_click('render_system')">
+                 onclick="ui_button_click('render_preset')">
                  Render L-System
               </button>
 
